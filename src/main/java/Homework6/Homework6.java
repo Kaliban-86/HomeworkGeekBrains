@@ -8,9 +8,9 @@ public class Homework6 {
     public static void main(String[] args) {
         Cat cat = new Cat();
         Dog dog = new Dog();
-        cat.run();
-        cat.swim();
-        dog.run();
-        dog.swim();
+        cat.run(100);
+        cat.swim(200);
+        dog.run(100);
+        dog.swim(200);
     }
 }

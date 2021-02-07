@@ -2,11 +2,11 @@ package Homework6;
 
 public class Animal {
 
-    public void run(){
+    public void run(int distance){
         System.out.println("пробежала");
     }
 
-    public void  swim(){
+    public void  swim(int distance){
         System.out.println("проплыла");
     }
 

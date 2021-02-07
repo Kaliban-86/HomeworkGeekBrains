@@ -2,7 +2,7 @@ package Homework6;
 
 public class Cat extends Animal{
     @Override
-    public void swim() {
-        System.out.println("кошка не умеет плавать");
+    public void swim(int distance) {
+        System.out.println("кошка не умеет плавать" + distance);
     }
 }
