@@ -6,11 +6,11 @@ package Homework6;
 
 public class Homework6 {
     public static void main(String[] args) {
-        Cat cat = new Cat();
-        Dog dog = new Dog();
+        Cat cat = new Cat("Мурзик");
+        Dog dog = new Dog("Бобик");
         cat.run(100);
         cat.swim(200);
-        dog.run(100);
-        dog.swim(200);
+        dog.run(9);
+        dog.swim(11);
     }
 }

@@ -7,7 +7,7 @@ public class Homework4 {
     public static char[][] map;
     public static Random rand = new Random();
     public static Scanner sc = new Scanner(System.in);
-    public static final int SIZE = 5;
+    public static final int SIZE = 6;
     public static final int NUMBER_OF_SINGS_TO_WIN = 4;
     public static final char DOT_EMPTY = '*';
     public static final char DOT_X = 'X';
