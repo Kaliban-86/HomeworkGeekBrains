@@ -33,7 +33,7 @@ public class Homework5 {
 }
 
 class Employee {
-    private static final int REFERENCE_AGE = 40;
+    private static final int REFERENCE_AGE = 39;
     private String fullName;
     private String position;
     private String email;
@@ -62,7 +62,7 @@ class Employee {
     }
 
     public void sortByAge() {
-        if (age < REFERENCE_AGE) {
+        if (getAge() < REFERENCE_AGE) {
             System.out.println();
             consoleOutput();
         }
