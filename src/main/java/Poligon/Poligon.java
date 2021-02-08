@@ -8,9 +8,12 @@ import Homework6.Cat;
 //        конкретные значения (по огранияениям) передавать в конструкторе каждого животного
 //          методы бежать и плыть - абстрактные методы.
 //         переопределение полей из родительского класса в наследниках
+
 public class Poligon {
     public static void main(String[] args) {
-        Cat2 cat = new Cat2("Барсик",100);
-        cat.run(20);
+        Cat2 cat = new Cat2("Барсик",200);
+        cat.run(100);
+        Eva eva = new Eva("Ева",100);
+        eva.run(70);
     }
 }
