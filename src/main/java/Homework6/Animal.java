@@ -4,11 +4,11 @@ public class Animal {
     String  name;
 
     public void run(int distance){
-        System.out.println("пробежала");
+        System.out.println(name + " пробежал " + distance + " метров");
     }
 
     public void  swim(int distance){
-        System.out.println("проплыла");
+        System.out.println(name + " проплыл " + distance + " метров");
     }
 
 }
