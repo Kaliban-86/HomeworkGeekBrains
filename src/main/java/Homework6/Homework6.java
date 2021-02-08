@@ -8,8 +8,8 @@ public class Homework6 {
     public static void main(String[] args) {
         Cat cat = new Cat("Мурзик");
         Dog dog = new Dog("Бобик");
-        Horse horse = new Horse();
-        cat.run(100);
-
+        cat.swim(250);
+        dog.run(340);
+        dog.swim(15);
     }
 }
