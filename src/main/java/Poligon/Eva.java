@@ -7,5 +7,7 @@ public class Eva extends Cat2{
         super(name, maxDistanceTraveled);
 
     }
-
+    public void swim(int distance){
+        System.out.println(name + " проплыла " + distance + " метров...");
+    }
 }

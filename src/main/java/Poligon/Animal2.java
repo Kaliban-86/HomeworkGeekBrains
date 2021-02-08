@@ -1,6 +1,6 @@
 package Poligon;
 
-public class Animal2 {
+public abstract class Animal2 {
     String name;
     int maxDistanceTraveled;
 
@@ -9,12 +9,8 @@ public class Animal2 {
         this.maxDistanceTraveled = maxDistanceTraveled;
 
     }
-    public void run(int distance) {
-        System.out.println(name + " пробежал " + distance + " метров");
-    }
+    public abstract void run(int distance);
 
-    public void swim(int distance) {
-        System.out.println(name + " проплыл " + distance + " метров");
-    }
+    public abstract void swim(int distance);
 
 }
