@@ -4,8 +4,8 @@ public abstract class Animal2 {
     String name;
     int maxDistanceTraveled;
 
-    Animal2(String name, int maxDistanceTraveled){
-        this.name = name;
+    Animal2(int maxDistanceTraveled){
+        //this.name = name;
         this.maxDistanceTraveled = maxDistanceTraveled;
 
     }

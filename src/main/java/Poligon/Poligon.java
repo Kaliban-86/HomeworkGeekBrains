@@ -11,9 +11,9 @@ import Homework6.Cat;
 
 public class Poligon {
     public static void main(String[] args) {
-        Cat2 catBarsic = new Cat2("Барсик",200);
+        Cat2 catBarsic = new Cat2(200);
         catBarsic.run(100);
-        Eva eva = new Eva("Симба",100);
+        Eva eva = new Eva(100);
         eva.run(70);
         catBarsic.swim(10);
         eva.swim(200);
