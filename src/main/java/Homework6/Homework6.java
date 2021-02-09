@@ -11,13 +11,11 @@ public class Homework6 {
     public static void main(String[] args) {
         Cat cat = new Cat(200, 0);
         Dog dog = new Dog(500, 10);
-        cat.run(210);
-        cat.run(200);
-        cat.swim(10);
-        dog.run(510);
-        dog.run(500);
-        dog.swim(15);
+        cat.run(150);
+        cat.swim(100);
+        dog.run(600);
         dog.swim(10);
+
 
     }
 }
