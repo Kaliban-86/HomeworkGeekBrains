@@ -1,14 +1,17 @@
 package Homework6;
 
-public class Animal {
+public abstract class Animal {
     String name;
+    int maxDistanceToRun;
+    int maxDistanceToSwim;
 
-    public void run(int distance) {
-        System.out.println(name + " пробежал " + distance + " метров");
+    Animal(int maxDistanceToRun, int MaxDistanceToSwim) {
+        this.maxDistanceToRun = maxDistanceToRun;
+        this.maxDistanceToSwim = MaxDistanceToSwim;
+
     }
 
-    public void swim(int distance) {
-        System.out.println(name + " проплыл " + distance + " метров");
-    }
+    public abstract void run(int distanceToOvercome);
 
+    public abstract void swim(int distanceToOvercome);
 }
