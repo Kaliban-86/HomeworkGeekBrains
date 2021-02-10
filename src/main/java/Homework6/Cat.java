@@ -1,15 +1,15 @@
 package Homework6;
 
-class Cat extends Animal {
+ class Cat extends Animal {
 
     Cat(int maxDistanceToRun, int maxDistanceToSwim, String name) {
-        super(maxDistanceToRun, maxDistanceToSwim);
         this.name = name;
-        name = "Барсик";
+        this.maxDistanceToRun = maxDistanceToRun;
+        this.maxDistanceToSwim = maxDistanceToSwim;
     }
 
     @Override
-    void run(int distanceToOvercome) {
+     void run(int distanceToOvercome) {
 
         if (getMaxDistanceToRun() == 0) {
             System.out.println(getName() + "  не умеет, но скорее не хочет, бегать... ");
@@ -30,9 +30,11 @@ class Cat extends Animal {
             System.out.println(getName() + " не умеет плавать...");
         } else if (getMaxDistanceToSwim() > distanceToOvercome) {
             System.out.println(getName() + " проплыл " + distanceToOvercome + " метров и еще с удовольствием проплывет " + (getMaxDistanceToSwim() - distanceToOvercome));
-        } else if (getMaxDistanceToSwim() == distanceToOvercome) {
+        } else if (getMaxDistanceToSwim() == distanceToOvercome){
             System.out.println(getName() + " проплыл " + distanceToOvercome + " метров");
-        } else if (getMaxDistanceToSwim() > 0) {
+        }
+
+        else if (getMaxDistanceToSwim() > 0) {
             System.out.println(getName() + " проплыл " + getMaxDistanceToSwim() + " метров и устал...");
         }
 
@@ -53,8 +55,7 @@ class Cat extends Animal {
             System.out.print(getName() + " не знаком с творчеством Кристофера Нолана, в связи с чем не имеет реверсивных способностей!!! Ну или просто ");
         return 0;
     }
-
-    String getName() {
+    String getName(){
         return name;
     }
 }

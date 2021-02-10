@@ -2,9 +2,10 @@ package Homework6;
 
 class Dog extends Animal {
 
-    Dog(int maxDistanceToRun, int maxDistanceToSwim) {
-        super(maxDistanceToRun, maxDistanceToSwim);
-        name = "Мухтар";
+    Dog(String name) {
+        this.name = name;
+        maxDistanceToRun = 500;
+        maxDistanceToSwim = 10;
     }
 
     @Override

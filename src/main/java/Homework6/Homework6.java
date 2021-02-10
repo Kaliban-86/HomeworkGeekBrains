@@ -9,15 +9,14 @@ package Homework6;
 
 public class Homework6 {
     public static void main(String[] args) {
-        Cat cat1 = new Cat(200, 0, "Мурзик");
-        Cat cat2 = new Cat(200, -5, "Барсик");
-        Dog dog = new Dog(500, 10); // У сабаки переопределено в классе поле name
-        cat1.run(150);
-        cat1.swim(100);
-        cat2.run(100);
-        cat2.swim(20);
-        dog.run(600);
-        dog.swim(10);
-
+        Cat catMurzic = new Cat(200, 0, "Мурзик");
+        Cat catBarsic = new Cat(200, -5, "Барсик");
+        Dog dog = new Dog("Барт");
+        catMurzic.run(150);
+        catMurzic.swim(100);
+        catBarsic.run(100);
+        catBarsic.swim(20);
+        dog.run(500);
+        dog.swim(11);
     }
 }
