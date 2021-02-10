@@ -1,6 +1,6 @@
 package Homework6;
 
-public abstract class Animal {
+abstract class Animal {
     String name = "Какой-то кот или пес";
     int maxDistanceToRun;
     int maxDistanceToSwim;
@@ -11,7 +11,7 @@ public abstract class Animal {
 
     }
 
-    public abstract void run(int distanceToOvercome);
+    abstract void run(int distanceToOvercome);
 
-    public abstract void swim(int distanceToOvercome);
+    abstract void swim(int distanceToOvercome);
 }

@@ -1,6 +1,6 @@
 package Homework6;
 
-public class Dog extends Animal {
+class Dog extends Animal {
 
     Dog(int maxDistanceToRun, int maxDistanceToSwim) {
         super(maxDistanceToRun, maxDistanceToSwim);
@@ -8,7 +8,7 @@ public class Dog extends Animal {
     }
 
     @Override
-    public void run(int distanceToOvercome) {
+    void run(int distanceToOvercome) {
 
         if (getMaxDistanceToRun() == 0) {
             System.out.println(name + "  не умеет, но скорее не хочет, бегать... ");
@@ -23,23 +23,21 @@ public class Dog extends Animal {
     }
 
     @Override
-    public void swim(int distanceToOvercome) {
+    void swim(int distanceToOvercome) {
 
         if (getMaxDistanceToSwim() == 0) {
             System.out.println(name + " не умеет плавать...");
         } else if (getMaxDistanceToSwim() > distanceToOvercome) {
             System.out.println(name + " проплыл " + distanceToOvercome + " метров и еще с удовольствием проплывет " + (getMaxDistanceToSwim() - distanceToOvercome));
-        } else if (getMaxDistanceToSwim() == distanceToOvercome){
+        } else if (getMaxDistanceToSwim() == distanceToOvercome) {
             System.out.println(name + " проплыл " + distanceToOvercome + " метров");
-        }
-
-        else if (getMaxDistanceToSwim() > 0) {
+        } else if (getMaxDistanceToSwim() > 0) {
             System.out.println(name + " проплыл " + getMaxDistanceToSwim() + " метров и устал...");
         }
 
     }
 
-    public int getMaxDistanceToSwim() {
+    int getMaxDistanceToSwim() {
         if (maxDistanceToSwim >= 0) {
             return maxDistanceToSwim;
         } else
@@ -47,7 +45,7 @@ public class Dog extends Animal {
         return 0;
     }
 
-    public int getMaxDistanceToRun() {
+    int getMaxDistanceToRun() {
         if (maxDistanceToRun >= 0) {
             return maxDistanceToRun;
         } else
