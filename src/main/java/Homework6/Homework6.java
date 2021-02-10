@@ -9,7 +9,7 @@ package Homework6;
 
 public class Homework6 {
     public static void main(String[] args) {
-        Cat catMurzic = new Cat(200, 0, "Мурзик");
+        Cat catMurzic = new Cat(100, 0, "Мурзик");
         Cat catBarsic = new Cat(200, -5, "Барсик");
         Dog dog = new Dog("Барт");
         catMurzic.run(150);
@@ -17,6 +17,6 @@ public class Homework6 {
         catBarsic.run(100);
         catBarsic.swim(20);
         dog.run(500);
-        dog.swim(11);
+        dog.swim(10);
     }
 }
