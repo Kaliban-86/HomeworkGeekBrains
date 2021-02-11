@@ -1,7 +1,7 @@
 package Homework6;
 
  abstract class Animal {
-     String name = "Какой-то кот или пес";
+     String name = "Животное";
     int maxDistanceToRun;
     int maxDistanceToSwim;
 
