@@ -11,12 +11,12 @@ public class Homework6 {
     public static void main(String[] args) {
         Cat catMurzic = new Cat(100, 0, "Мурзик");
         Cat catBarsic = new Cat(200, -5, "Барсик");
-        Dog dog = new Dog("Барт");
+        Dog dogPalcan = new Dog("Палкан");
         catMurzic.run(150);
         catMurzic.swim(100);
         catBarsic.run(100);
         catBarsic.swim(20);
-        dog.run(500);
-        dog.swim(10);
+        dogPalcan.run(500);
+        dogPalcan.swim(10);
     }
 }
