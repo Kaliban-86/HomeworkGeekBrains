@@ -10,17 +10,18 @@ public class Cat {
         this.appetite = appetite;
     }
 
-    public void eat(Plate pl) {
-        if (appetite <= pl.food){
-            satiety=true;
+    public void eat(Plate plate) {
+        if (appetite <= plate.food) {
+            satiety = true;
+            plate.decreaseFood(appetite);
+        } else satiety = false;
 
-        }
-        pl.decreaseFood(appetite);
 
     }
-    public void satietyInfo () {
+
+    public void satietyInfo() {
         if (satiety) {
-            System.out.println(name + " хватило еды и он сыт!");
-        } else System.out.println(name + " не хватило еды!");
+            System.out.println(name + " скушал " + appetite + " котлет и наелся!");
+        } else System.out.println("В тарелке недостаточно котлет для " + name + "а!");
     }
 }

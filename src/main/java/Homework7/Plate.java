@@ -8,19 +8,16 @@ public class Plate {
     }
 
     public void decreaseFood(int n) {
-        if (n > food){
-            System.out.println("Недостаточно еды для этого кота(((");
-        } else
         food -= n;
     }
 
     public void info() {
-        System.out.println("plate: " + food);
+        System.out.println("В тарелке: " + food + " котлет");
     }
 
     public void addFoodToPlate(int additive){
         food = food + additive;
-        System.out.println("В тарелку добавлено " + additive + " порций еды");
+        System.out.println("В тарелку добавлено " + additive + " котлет");
     }
 
 }
