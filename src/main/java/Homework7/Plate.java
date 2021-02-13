@@ -7,8 +7,8 @@ public class Plate {
         this.food = food;
     }
 
-    public void decreaseFood(int n) {
-        food -= n;
+    public void decreaseFood(int countFood) {
+        food -= countFood;
     }
 
     public void info() {

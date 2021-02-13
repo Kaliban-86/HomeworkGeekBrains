@@ -1,13 +1,16 @@
 package Homework7;
 
+import java.util.Random;
+
 public class Cat {
-    private String name;
-    private int appetite;
+    public static Random rand = new Random();
+    private final String name;
+    private final int appetite;
     private boolean satiety = false;
 
-    public Cat(String name, int appetite) {
+    public Cat(String name) {
         this.name = name;
-        this.appetite = appetite;
+        appetite = (rand.nextInt(10) + 1);
     }
 
     public void eat(Plate plate) {
@@ -15,7 +18,6 @@ public class Cat {
             satiety = true;
             plate.decreaseFood(appetite);
         } else satiety = false;
-
 
     }
 
