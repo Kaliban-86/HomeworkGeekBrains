@@ -17,7 +17,7 @@ public class Homework7 {
         Cat[] cats = new Cat[5];
         cats[0] = new Cat("Томас");
         cats[1] = new Cat("Джек");
-        cats[2] = new Cat("Крот");
+        cats[2] = new Cat("Корт");
         cats[3] = new Cat("Борис");
         cats[4] = new Cat("Геральт");
 
