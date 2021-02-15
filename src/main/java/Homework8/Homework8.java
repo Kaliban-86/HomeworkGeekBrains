@@ -14,10 +14,11 @@ public class Homework8 {
         Robot robot = new Robot("Robocop",100,100);
         Cat cat = new Cat("Мурзик",100,100);
         Treadmill treadmill = new Treadmill(200);
-        Wall wall = new Wall(15);
+
+        Wall wall = new Wall(15,person);
 
         treadmill.run(person);
-
+        wall.jump();
 
     }
 }
