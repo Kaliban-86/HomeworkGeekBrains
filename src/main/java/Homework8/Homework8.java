@@ -10,9 +10,12 @@ package Homework8;
 
 public class Homework8 {
     public static void main(String[] args) {
-        Person person = new Person("Арсен");
+        Person person = new Person("Арсен", 600);
         Robot robot = new Robot("Robocop");
         Cat cat = new Cat("Мурзик");
+        Treadmill treadmill = new Treadmill(700);
+
+        person.run(treadmill);
 
 
     }
