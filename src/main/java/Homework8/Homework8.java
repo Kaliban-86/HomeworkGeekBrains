@@ -10,12 +10,13 @@ package Homework8;
 
 public class Homework8 {
     public static void main(String[] args) {
-        Person person = new Person("Арсен", 600);
-        Robot robot = new Robot("Robocop");
-        Cat cat = new Cat("Мурзик");
-        Treadmill treadmill = new Treadmill(700);
+        Person person = new Person("Арсен", 500,5);
+        Robot robot = new Robot("Robocop",100,100);
+        Cat cat = new Cat("Мурзик",100,100);
+        Treadmill treadmill = new Treadmill(200);
+        Wall wall = new Wall(15);
 
-        person.run(treadmill);
+        treadmill.run(person);
 
 
     }

@@ -2,16 +2,12 @@ package Homework8;
 
 public class Robot {
     String name;
+    int maxRunningDistance;
+    int maxJumpHeight;
 
-    Robot(String name) {
+    Robot(String name, int maxRunningDistance, int maxJumpHeight) {
         this.name = name;
-    }
-
-    public void run() {
-        System.out.println(name + " бежит");
-    }
-
-    public void jump() {
-        System.out.println(name + " прыгает");
+        this.maxRunningDistance = maxRunningDistance;
+        this.maxJumpHeight = maxJumpHeight;
     }
 }
