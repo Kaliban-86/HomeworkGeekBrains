@@ -1,7 +1,10 @@
 package Homework8;
 
-public interface Moving {
-    public void run(Treadmill treadmill);
-    //public  void jump(Wall wall);
+public interface Moving  {
+     void run(int trackLenght);
+
+
+
+     //public  void jump(Wall wall);
 
 }

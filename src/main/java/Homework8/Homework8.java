@@ -11,8 +11,8 @@ package Homework8;
 public class Homework8 {
     public static void main(String[] args) {
         Person person = new Person("Арсен", 500, 5);
-        Robot robot = new Robot("Robocop", 100, 10);
-        Cat cat = new Cat("Мурзик", 100, 2);
+        //Robot robot = new Robot("Robocop", 100, 10);
+        //Cat cat = new Cat("Мурзик", 100, 2);
 
         Treadmill treadmill = new Treadmill(250);
         Wall wall = new Wall(6);
@@ -20,22 +20,24 @@ public class Homework8 {
         Moving[] participants = new Moving[6];
 
         participants[0] = new Person("Майк", 300, 1);
-        participants[1] = new Robot("Красная Королева", 400, 3);
-        participants[2] = new Cat("Томас", 150, 1);
-        participants[3] = new Person("Сергей", 500, 2);
-        participants[4] = new Robot("Вижин", 450, 4);
-        participants[5] = new Cat("Барсик", 200,2);
+       // participants[1] = new Robot("Красная Королева", 400, 3);
+       // participants[2] = new Cat("Томас", 150, 1);
+        participants[3] = new Person("Сергей", 200, 2);
+        //participants[4] = new Robot("Вижин", 450, 4);
+       // participants[5] = new Cat("Барсик", 200,2);
 
-        holdingACompetition(participants,treadmill);
 
+
+        Obstructing[] obstructings = new Obstructing[3];
+        obstructings[0] = new Treadmill(150);
+        obstructings[1] = new Treadmill(250);
+        obstructings[2] = new Treadmill(300);
+
+        holdingACompetition(participants,obstructings);
     }
-    public static void holdingACompetition (Moving[] participants,Treadmill treadmill){
-        participants[0].run(treadmill);
-        participants[1].run(treadmill);
-        participants[2].run(treadmill);
-        participants[3].run(treadmill);
-        participants[4].run(treadmill);
-        participants[5].run(treadmill);
+    public static void holdingACompetition (Moving[] participants,Obstructing[] obstructing){
 
+       participants[0].run(obstructing[0].obstracleSize());
+       participants[3].run(obstructing[1].obstracleSize());
     }
 }
