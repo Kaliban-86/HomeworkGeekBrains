@@ -4,8 +4,8 @@ package Homework8;
 //        +Создайте два класса: беговая дорожка и стена, при прохождении через которые, участники должны выполнять
 //        соответствующие действия (бежать или прыгать), результат выполнения печатаем в консоль (успешно пробежал,
 //        не смог пробежать и т.д.).
-//        Создайте два массива: с участниками и препятствиями, и заставьте всех участников пройти этот набор препятствий.
-//        * У препятствий есть длина (для дорожки) или высота (для стены), а участников ограничения на бег и прыжки.
+//        +Создайте два массива: с участниками и препятствиями, и заставьте всех участников пройти этот набор препятствий.
+//        +* У препятствий есть длина (для дорожки) или высота (для стены), а участников ограничения на бег и прыжки.
 //        Если участник не смог пройти одно из препятствий, то дальше по списку он препятствий не идет.
 
 public class Homework8 {
@@ -24,15 +24,15 @@ public class Homework8 {
         participants[2] = new Cat("Томас", 150, 1);
         participants[3] = new Person("Сергей", 200, 2);
         participants[4] = new Robot("Вижин", 450, 12);
-        participants[5] = new Cat("Барсик", 200, 2);
+        participants[5] = new Cat("Барсик", 250, 2);
 
 
         Obstructing[] obstructings = new Obstructing[6];
-        obstructings[0] = new Treadmill(300);
+        obstructings[0] = new Treadmill(250);
         obstructings[1] = new Treadmill(150);
         obstructings[2] = new Wall(12);
         obstructings[3] = new Treadmill(250);
-        obstructings[4] = new Treadmill(250);
+        obstructings[4] = new Wall(9);
         obstructings[5] = new Treadmill(250);
 
         holdingACompetition(participants, obstructings);

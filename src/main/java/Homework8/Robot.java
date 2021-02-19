@@ -17,9 +17,8 @@ public class Robot implements Moving {
             return true;
         } else {
             System.out.println(name + " не смог пробежать " + treadmill.trackLenght + " метров!");
-            return  false;
+            return false;
         }
-
     }
 
     public boolean jump(Wall wall) {
@@ -28,8 +27,7 @@ public class Robot implements Moving {
             return true;
         } else {
             System.out.println(name + " не смог перепрыгнуть " + wall.hight + " метров!");
-            return  false;
+            return false;
         }
-
     }
 }

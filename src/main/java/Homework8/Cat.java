@@ -19,7 +19,6 @@ public class Cat implements Moving {
             System.out.println(name + " не смог пробежать " + treadmill.trackLenght + " метров!");
             return false;
         }
-
     }
 
     public boolean jump(Wall wall) {
@@ -30,6 +29,5 @@ public class Cat implements Moving {
             System.out.println(name + " не смог перепрыгнуть " + wall.hight + " метров!");
             return false;
         }
-
     }
 }

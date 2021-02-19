@@ -6,5 +6,4 @@ public  class Treadmill implements Obstructing {
     Treadmill(int trackLenght) {
         this.trackLenght = trackLenght;
     }
-
 }
