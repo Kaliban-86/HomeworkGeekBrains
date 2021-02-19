@@ -11,22 +11,25 @@ public class Person implements Moving {
         this.maxJumpHeight = maxJumpHeight;
     }
 
-    public void run(int trackLenght) {
-        if (maxRunningDistance >= trackLenght) {
-            System.out.println(name + " успешно пробежал " + trackLenght + " метров!");
+    public boolean run(Treadmill treadmill) {
+        if (maxRunningDistance >= treadmill.trackLenght) {
+            System.out.println(name + " успешно пробежал " + treadmill.trackLenght + " метров!");
+            return  true;
         } else {
-            System.out.println(name + " не смог пробежать " + trackLenght + " метров!");
+            System.out.println(name + " не смог пробежать " + treadmill.trackLenght + " метров!");
+            return  false;
         }
-
     }
 
-    public void jump(Wall wall) {
+    public boolean jump(Wall wall) {
         if (maxJumpHeight >= wall.hight) {
             System.out.println(name + " успешно перепрыгнул " + wall.hight + " метров!");
+            return  true;
         } else {
             System.out.println(name + " не смог перепрыгнуть " + wall.hight + " метров!");
+            return  false;
         }
-
     }
+
 
 }

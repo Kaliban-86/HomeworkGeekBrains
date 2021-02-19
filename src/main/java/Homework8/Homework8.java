@@ -11,33 +11,47 @@ package Homework8;
 public class Homework8 {
     public static void main(String[] args) {
         Person person = new Person("Арсен", 500, 5);
-        //Robot robot = new Robot("Robocop", 100, 10);
-        //Cat cat = new Cat("Мурзик", 100, 2);
+        Robot robot = new Robot("Robocop", 100, 10);
+        Cat cat = new Cat("Мурзик", 100, 2);
 
         Treadmill treadmill = new Treadmill(250);
         Wall wall = new Wall(6);
 
         Moving[] participants = new Moving[6];
 
-        participants[0] = new Person("Майк", 300, 1);
-       // participants[1] = new Robot("Красная Королева", 400, 3);
-       // participants[2] = new Cat("Томас", 150, 1);
+        participants[0] = new Person("Майк", 200, 10);
+        participants[1] = new Robot("Альтрон", 400, 11);
+        participants[2] = new Cat("Томас", 150, 1);
         participants[3] = new Person("Сергей", 200, 2);
-        //participants[4] = new Robot("Вижин", 450, 4);
-       // participants[5] = new Cat("Барсик", 200,2);
+        participants[4] = new Robot("Вижин", 450, 12);
+        participants[5] = new Cat("Барсик", 200, 2);
 
 
+        Obstructing[] obstructings = new Obstructing[6];
+        obstructings[0] = new Treadmill(300);
+        obstructings[1] = new Treadmill(150);
+        obstructings[2] = new Wall(12);
+        obstructings[3] = new Treadmill(250);
+        obstructings[4] = new Treadmill(250);
+        obstructings[5] = new Treadmill(250);
 
-        Obstructing[] obstructings = new Obstructing[3];
-        obstructings[0] = new Treadmill(150);
-        obstructings[1] = new Treadmill(250);
-        obstructings[2] = new Treadmill(300);
-
-        holdingACompetition(participants,obstructings);
+        holdingACompetition(participants, obstructings);
     }
-    public static void holdingACompetition (Moving[] participants,Obstructing[] obstructing){
 
-       participants[0].run(obstructing[0].obstracleSize());
-       participants[3].run(obstructing[1].obstracleSize());
+    public static void holdingACompetition(Moving[] participants, Obstructing[] obstructing) {
+        boolean bool = true;
+        for (int i = 0; i < participants.length; i++) {
+            for (int j = 0; j < obstructing.length; j++) {
+                if (obstructing[j] instanceof Treadmill) {
+                    if (!participants[i].run((Treadmill) obstructing[j])) {
+                        break;
+                    }
+                } else if (obstructing[j] instanceof Wall) {
+                    if (!participants[i].jump((Wall) obstructing[j])) {
+                        break;
+                    }
+                }
+            }
+        }
     }
 }
