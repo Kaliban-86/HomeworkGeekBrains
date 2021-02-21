@@ -1,7 +1,8 @@
 package Homework9;
 
 public class MyArraySizeException extends Exception {
-    public MyArraySizeException(String message) {
-        super(message);
+    String massage;
+    public MyArraySizeException() {
+        this.massage = "Необходимо изменить размер массива на 4 х 4!";
     }
 }
