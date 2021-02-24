@@ -45,6 +45,5 @@ public class Homework10 {
         for (Map.Entry<String, Integer> entry : counts.entrySet()) {
             System.out.println(entry.getKey() + " - " + entry.getValue());
         }
-
     }
 }
