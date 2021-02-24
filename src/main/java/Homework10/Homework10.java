@@ -1,7 +1,7 @@
 package Homework10;
 //        + Создать массив с набором слов (10-20 слов, должны встречаться повторяющиеся).
 //        + Найти и вывести список уникальных слов, из которых состоит массив (дубликаты не считаем).
-//          Посчитать, сколько раз встречается каждое слово.
+//        + Посчитать, сколько раз встречается каждое слово.
 
 //        Написать простой класс Телефонный Справочник, который хранит в себе список фамилий и телефонных номеров.
 //        В этот телефонный справочник с помощью метода add() можно добавлять записи, а с помощью метода get() искать
@@ -10,10 +10,7 @@ package Homework10;
 //        добавлять лишний функционал (дополнительные поля (имя, отчество, адрес), взаимодействие с пользователем
 //        через консоль и т.д). Консоль использовать только для вывода результатов проверки телефонного справочника.
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class Homework10 {
     public static void main(String[] args) {
@@ -31,8 +28,23 @@ public class Homework10 {
         words.add("Дружба");
         words.add("Снег");
         words.add("Роса");
+        words.add("Танк");
 
-        Set<String> uniqueElementsOfList = new HashSet <>(words);
+        Set<String> uniqueElementsOfList = new LinkedHashSet<>(words);
         System.out.println(uniqueElementsOfList);
+
+        Map<String, Integer> counts = new HashMap<>();
+        for (String str : words) {
+            if (counts.containsKey(str)) {
+                counts.put(str, counts.get(str) + 1);
+            } else {
+                counts.put(str, 1);
+            }
+        }
+
+        for (Map.Entry<String, Integer> entry : counts.entrySet()) {
+            System.out.println(entry.getKey() + " - " + entry.getValue());
+        }
+
     }
 }
