@@ -37,7 +37,7 @@ public class Homework10 {
         Map<String, Integer> counts = new HashMap<>();
         for (String str : words) {
             if (counts.containsKey(str)) {
-                counts.put(str, counts.get(str) + 1);
+                counts.put(str, counts.get(str) + 1); // 1 - первоначальное значение счетчика повторений слов.
             } else {
                 counts.put(str, 1);
             }
@@ -57,6 +57,8 @@ public class Homework10 {
 
         inRussia.get("ИВАНОВ");
         inRussia.get("петров");
+        inRussia.get("Сидоров");
 
+        // Справочник не расчитан, на ввод фамилий которые в нем отсутствуют, но этого и не было в задании!
     }
 }
