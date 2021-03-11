@@ -8,14 +8,13 @@ package Homework14;
 //        + Написать набор тестов для этого метода (по 3-4 варианта входных данных).
 //          Вх: [ 1 2 4 4 2 3 4 1 7 ] -> вых: [ 1 7 ].
 //
-//        Написать метод, который проверяет состав массива из чисел 1 и 4. Если в нем нет хоть одной четверки или единицы,
-//        то метод вернет false; Написать набор тестов для этого метода (по 3-4 варианта входных данных).
+//        + Написать метод, который проверяет состав массива из чисел 1 и 4. Если в нем нет хоть одной четверки или единицы,
+//          то метод вернет false;
+//        - Написать набор тестов для этого метода (по 3-4 варианта входных данных).
 //        [ 1 1 1 4 4 1 4 4 ] -> true
 //        [ 1 1 1 1 1 1 ] -> false
 //        [ 4 4 4 4 ] -> false
 //        [ 1 4 4 1 1 4 3 ] -> false
-
-import Homework9.MyArraySizeException;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -24,10 +23,13 @@ import java.util.List;
 public class Homework14 {
     public static void main(String[] args) {
 
-        int[] arrToTest = {4, 6, 2, 2, 6, 4, 7, 1};
+        int[] arrToTest1 = {4, 6, 2, 2, 6, 2, 7, 8};
 
-        System.out.println(Arrays.toString(afterFourArray(arrToTest)));
+        int[] arrToTest2 = {1, 4, 4, 4, 4, 1, 1};
 
+
+        System.out.println(Arrays.toString(afterFourArray(arrToTest1)));
+        System.out.println(oneAndFour(arrToTest2));
     }
 
     public static int[] afterFourArray(int[] arr) {
@@ -36,8 +38,8 @@ public class Homework14 {
         List<Integer> arrayList = new ArrayList<>();
         int count = 0;
 
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] == numberOfArrleftHalfEnd) {
+        for (int k : arr) {
+            if (k == numberOfArrleftHalfEnd) {
                 count++;
             }
         }
@@ -61,7 +63,23 @@ public class Homework14 {
         }
         return arr2;
     }
-}
 
+    public static boolean oneAndFour(int[] arr) {
+        int numberOne = 1;
+        int numberTwo = 4;
+        int countNumberOne = 0;
+        int countNumberTwo = 0;
+        int counOthersNumbers = 0;
+
+        for (int j : arr) {
+            if (j == numberOne) {
+                countNumberOne++;
+            } else if (j == numberTwo) {
+                countNumberTwo++;
+            } else counOthersNumbers++;
+        }
+        return (countNumberOne > 0 && countNumberTwo > 0 && counOthersNumbers == 0);
+    }
+}
 
 
