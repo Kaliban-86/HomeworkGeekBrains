@@ -31,4 +31,28 @@ class Homework14Test {
                 () -> Homework14.afterFourArray(inputArr)
         );
     }
+
+    @Test
+    void oneAndFour() {
+        int[] inputArr = new int[]{4, 4, 1, 4, 1, 4, 1, 1};
+        assertTrue(Homework14.oneAndFour(inputArr));
+    }
+
+    @Test
+    void oneAndFourOnlyOne() {
+        int[] inputArr = new int[]{1, 1, 1, 1, 1, 1, 1, 1};
+        assertFalse(Homework14.oneAndFour(inputArr));
+    }
+
+    @Test
+    void oneAndFourOnlyFour() {
+        int[] inputArr = new int[]{4, 4, 4, 4, 4, 4, 4, 4};
+        assertFalse(Homework14.oneAndFour(inputArr));
+    }
+
+    @Test
+    void oneAndFourAndOthersNumbers() {
+        int[] inputArr = new int[]{4, 4, 1, 1, 1, 1, 7, 4};
+        assertFalse(Homework14.oneAndFour(inputArr));
+    }
 }

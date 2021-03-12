@@ -10,7 +10,7 @@ package Homework14;
 //
 //        + Написать метод, который проверяет состав массива из чисел 1 и 4. Если в нем нет хоть одной четверки или единицы,
 //          то метод вернет false;
-//        - Написать набор тестов для этого метода (по 3-4 варианта входных данных).
+//        + Написать набор тестов для этого метода (по 3-4 варианта входных данных).
 //        [ 1 1 1 4 4 1 4 4 ] -> true
 //        [ 1 1 1 1 1 1 ] -> false
 //        [ 4 4 4 4 ] -> false
@@ -23,9 +23,9 @@ import java.util.List;
 public class Homework14 {
     public static void main(String[] args) {
 
-        int[] arrToTest1 = {4, 6, 2, 2, 6, 2, 7, 8};
+        int[] arrToTest1 = {4, 6, 2,4, 6, 2, 7, 8};
 
-        int[] arrToTest2 = {1, 4, 4, 4, 4, 1, 1};
+        int[] arrToTest2 = {1, 4, 4, 4, 1, 1, 1};
 
 
         System.out.println(Arrays.toString(afterFourArray(arrToTest1)));
@@ -69,16 +69,16 @@ public class Homework14 {
         int numberTwo = 4;
         int countNumberOne = 0;
         int countNumberTwo = 0;
-        int counOthersNumbers = 0;
+        int countOthersNumbers = 0;
 
         for (int j : arr) {
             if (j == numberOne) {
                 countNumberOne++;
             } else if (j == numberTwo) {
                 countNumberTwo++;
-            } else counOthersNumbers++;
+            } else countOthersNumbers++;
         }
-        return (countNumberOne > 0 && countNumberTwo > 0 && counOthersNumbers == 0);
+        return (countNumberOne > 0 && countNumberTwo > 0 && countOthersNumbers == 0);
     }
 }
 
