@@ -14,7 +14,7 @@ public class Homework9 {
     public static void main(String[] args) throws MyArraySizeException, MyArrayDataException {
 
         String[][] strArr = {
-                {"1", "7", "1", "1"},
+                {"1", "1", "1"},
                 {"1", "1", "1", "1"},
                 {"1", "1", "1", "1"},
                 {"1", "1", "1", "1"},
